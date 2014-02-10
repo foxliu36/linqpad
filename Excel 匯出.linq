@@ -1,4 +1,4 @@
-<Query Kind="SQL">
+<Query Kind="Program">
   <Connection>
     <ID>0f7f090b-371a-4c23-917e-2e833dd307f5</ID>
     <Persist>true</Persist>
@@ -11,25 +11,14 @@
   </Connection>
 </Query>
 
-select TOP 10 *
-from TB_EB_MENU
+//用來匯出excel檔案
+void Main()
+{
+	//要先載入兩個dll Microsoft Office 14.0 Object Library 和 Microsoft.Office.Interop.Excel
+	//範例 http://www.dotblogs.com.tw/joe80075/archive/2013/02/02/89815.aspx
+	
+	//EIP裡面用到的Aspose.Cells要錢!!!!!!(需要輸入license)
+}
 
-select TOP 10 *
-from TB_EB_SEC_ROLE
-where 1=1
-and MODULE_ID like 'HR'
 
-
-select d.* from TB_EB_USER u
-join TB_EB_EMPL_DEP d on u.USER_GUID = d.USER_GUID
-where 1=1 
---and USER_GUID = '2bc9ca2f-e55d-4f82-b7ab-7649b79ad72b'
-and u.NAME like '%汎%'
-
-select TOP 100 *
-from TB_EB_SEC_ROLE_MEMBER --where RM_ID like '15108ff6-3687-480b-904b-e4550c843312'
-where 1=1
-and ROLE_ID = 'AttendanceManager'
-
-select TOP 10 *
-from TB_EB_SEC_PERM
+// Define other methods and classes here

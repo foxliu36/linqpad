@@ -15,11 +15,11 @@ insert into TB_HR_CLOCKTIME (ID, EMPLOYEE_ID, EMPLOYEE_EIP, DATE_TIME, TERMINAL_
 
 select ID,  EmployeeID, UserID, DateTime,
 TerminalID, VerificationSource
-from DoorLogTemp17v2
+from DoorLog17
 where UserID <> '0'
-and DateTime >= '2013/12/27' 
-and DateTime <= '2014/1/16' 
+and DateTime >= '2014/1/17' 
+and DateTime <= '2014/1/31' 
 and ID not in (
 select ID from TB_HR_CLOCKTIME 
-where DATE_TIME >= '2013/12/27' and DATE_TIME <= '2014/1/16'
+where DATE_TIME >= '2014/1/17' and DATE_TIME <= '2014/1/31'
 )

@@ -43,7 +43,7 @@ void Main()
 	XElement xmlTree2 = new XElement("Root",
 							xmlTree1.Element("Child1"),
 							child2
-	);
+						);
 	Console.WriteLine(xmlTree2);
 	// Compare Child1 identity.
 	Console.WriteLine("Child1 was {0}",
